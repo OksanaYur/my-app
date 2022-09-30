@@ -15,7 +15,7 @@ axios.get(apiUrl).then(handleRespnse);
     return (
         <Loader
         type="Puff"
-        color="blue"
+        color="yellow"
         height={100}
         width={100}
         timeout={3000} />
