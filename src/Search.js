@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import axios from "axios";
 
-export default function WeatherSearch() {
+export default function WeatherSearch(props) {
 const [city, setCity] = useState("");
 const [result, setResult] = useState("");
 const [weather, setWeather] = useState("");
@@ -22,10 +22,10 @@ function displayWeather(response) {
             let apiKey = "fe80b84fc85eea0c9b1fafa5aa3bbced";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
 
-  axios.get(apiUrl).then(handleRespnse);
+  axios.get(apiUrl).then(handleSubmit);
         }
 
-        function updateCity(city) {
+        function updateCity(event) {
             setCity(event.target.value);
         }
         let form = (
